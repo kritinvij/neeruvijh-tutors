@@ -20,7 +20,7 @@ export default function Navbar() {
             href="#contact"
             className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors shrink-0"
           >
-            Book Free Trial
+            Get in Touch
           </a>
         </div>
       </div>

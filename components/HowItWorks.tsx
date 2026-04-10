@@ -7,9 +7,9 @@ const steps = [
   },
   {
     number: "02",
-    title: "Free Trial Class",
+    title: "Introductory Class",
     description:
-      "Book a free 30-minute introductory session. No commitment — see the teaching style and ask questions.",
+      "Schedule a 30-minute introductory session to understand your child's level and discuss what they need.",
   },
   {
     number: "03",
@@ -58,7 +58,7 @@ export default function HowItWorks() {
             href="#contact"
             className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
           >
-            Book Free Trial
+            Get in Touch
           </a>
         </div>
       </div>
