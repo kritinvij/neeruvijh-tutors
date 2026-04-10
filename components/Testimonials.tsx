@@ -26,33 +26,36 @@ const testimonials: Testimonial[] = [
   },
 ];
 
+import AnimateIn from "@/components/AnimateIn";
+
 export default function Testimonials() {
   return (
     <section className="bg-white py-20">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-wider text-orange-500 mb-3">
-            Testimonials
-          </p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            What Students &amp; Parents Say
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Hear from families who have learned with Neeru Maam.
-          </p>
-        </div>
+        <AnimateIn>
+          <div className="text-center">
+            <p className="text-sm font-semibold uppercase tracking-wider text-orange-500 mb-3">
+              Testimonials
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              What Students &amp; Parents Say
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Hear from families who have learned with Neeru Maam.
+            </p>
+          </div>
+        </AnimateIn>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-          {testimonials.map((t) => (
-            <div
-              key={`${t.name}-${t.context}`}
-              className="bg-white rounded-2xl p-6 shadow-md border border-orange-50 hover:shadow-lg hover:-translate-y-1 transition-all duration-200"
-            >
-              <div className="text-5xl text-orange-300 font-serif leading-none mb-3 -mt-1">&ldquo;</div>
-              <p className="text-gray-700 text-sm leading-relaxed mb-4">{t.quote}</p>
-              <p className="font-semibold text-gray-900 text-sm">{t.name}</p>
-              <p className="text-xs text-gray-500">{t.context}</p>
-            </div>
+          {testimonials.map((t, i) => (
+            <AnimateIn key={`${t.name}-${t.context}`} delay={i * 0.15}>
+              <div className="bg-white rounded-2xl p-6 shadow-md border border-orange-50 hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
+                <div className="text-5xl text-orange-300 font-serif leading-none mb-3 -mt-1">&ldquo;</div>
+                <p className="text-gray-700 text-sm leading-relaxed mb-4">{t.quote}</p>
+                <p className="font-semibold text-gray-900 text-sm">{t.name}</p>
+                <p className="text-xs text-gray-500">{t.context}</p>
+              </div>
+            </AnimateIn>
           ))}
         </div>
       </div>
