@@ -18,7 +18,7 @@ export default function Navbar() {
           </a>
           <a
             href="#contact"
-            className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors shrink-0"
+            className="bg-orange-500 hover:bg-orange-700 hover:shadow-md active:scale-95 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-150 shrink-0"
           >
             Get in Touch
           </a>

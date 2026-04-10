@@ -56,7 +56,7 @@ export default function HowItWorks() {
         <div className="text-center mt-12">
           <a
             href="#contact"
-            className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+            className="inline-block bg-orange-500 hover:bg-orange-700 hover:shadow-lg hover:scale-105 active:scale-95 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-150"
           >
             Get in Touch
           </a>

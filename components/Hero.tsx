@@ -27,7 +27,7 @@ export default function Hero() {
         <div className="flex gap-4 justify-center mt-8 flex-wrap">
           <a
             href="#contact"
-            className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-3 rounded-lg font-semibold transition-colors"
+            className="bg-white text-orange-600 hover:bg-orange-100 hover:shadow-xl hover:scale-105 active:scale-95 px-8 py-3 rounded-lg font-semibold transition-all duration-150"
           >
             Get in Touch
           </a>
@@ -35,7 +35,7 @@ export default function Hero() {
             href="https://www.youtube.com/c/MathAndMorewithNeeruVijh"
             target="_blank"
             rel="noopener noreferrer"
-            className="border-2 border-white text-white hover:bg-white/10 px-8 py-3 rounded-lg font-semibold transition-colors"
+            className="border-2 border-white text-white hover:bg-white/25 hover:scale-105 active:scale-95 px-8 py-3 rounded-lg font-semibold transition-all duration-150"
           >
             Watch on YouTube
           </a>

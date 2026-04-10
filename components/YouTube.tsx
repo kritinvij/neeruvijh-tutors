@@ -37,7 +37,7 @@ export default function YouTube() {
             href="https://www.youtube.com/c/MathAndMorewithNeeruVijh"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+            className="bg-red-600 hover:bg-red-800 hover:shadow-md hover:scale-105 active:scale-95 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-150"
           >
             Visit Channel
           </a>
