@@ -52,9 +52,9 @@ export default function Subjects() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12">
-          {cards.map((card, index) => (
+          {cards.map((card) => (
             <div
-              key={index}
+              key={`${card.subject}-${card.classes}`}
               className="bg-white rounded-xl border border-amber-100 p-6 hover:shadow-md transition-shadow"
             >
               <div className="text-2xl mb-4 w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">

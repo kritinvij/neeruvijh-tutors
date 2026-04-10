@@ -36,7 +36,7 @@ export default function WhyChoose() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-orange-500 mb-3">
-            Why Choose
+            Why Us
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
             Why Choose Neeru Maam
@@ -48,8 +48,8 @@ export default function WhyChoose() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-          {features.map((feature, index) => (
-            <div key={index} className="text-center p-6">
+          {features.map((feature) => (
+            <div key={feature.title} className="text-center p-6">
               <div className="text-3xl mb-4 w-16 h-16 bg-amber-50 rounded-full flex items-center justify-center mx-auto">
                 {feature.emoji}
               </div>

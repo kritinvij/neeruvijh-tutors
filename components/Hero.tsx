@@ -1,9 +1,6 @@
 export default function Hero() {
   return (
-    <section
-      className="min-h-[85vh] flex items-center justify-center"
-      style={{ background: "linear-gradient(135deg, #f97316 0%, #f59e0b 100%)" }}
-    >
+    <section className="min-h-[85vh] flex items-center justify-center bg-gradient-to-br from-orange-500 to-amber-400">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white">
           Neeru Vijh
