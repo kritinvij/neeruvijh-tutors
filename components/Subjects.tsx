@@ -30,7 +30,7 @@ const cards: SubjectCard[] = [
     subject: "Science",
     classes: "Classes 6-10",
     description:
-      "Physics, Chemistry, and Biology - conceptual clarity for board exams",
+      "Physics, Chemistry, and Biology - building the conceptual clarity that board exams reward",
   },
 ];
 
@@ -49,8 +49,8 @@ export default function Subjects() {
               Subjects &amp; Classes
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Expert tutoring in Maths and Science for Classes 6-12, available in English and
-              Hindi medium.
+              Maths tutoring for Classes 6-12 and Science for Classes 6-10, in English and Hindi
+              medium.
             </p>
           </div>
         </AnimateIn>

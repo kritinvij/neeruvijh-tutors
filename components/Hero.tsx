@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center bg-gradient-to-br from-orange-500 to-amber-400 overflow-hidden">
+    <section className="relative flex items-center justify-center bg-gradient-to-br from-orange-500 to-amber-400 overflow-hidden pt-28 pb-20 sm:pt-36 sm:pb-24">
       {/* Subtle dot pattern overlay */}
       <div
         className="absolute inset-0 opacity-10"
@@ -11,9 +11,15 @@ export default function Hero() {
       />
 
       <div className="relative max-w-4xl mx-auto px-6 text-center">
-        <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/40 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 nv-fade-in">
-          <span>🏅</span>
-          <span>Delhi State Teachers&apos; Award 2022</span>
+        <div className="flex flex-wrap justify-center gap-2 mb-6 nv-fade-in">
+          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/40 text-white px-4 py-2 rounded-full text-sm font-semibold">
+            <span>🏅</span>
+            <span>Delhi State Teachers&apos; Award 2022</span>
+          </div>
+          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/40 text-white px-4 py-2 rounded-full text-sm font-semibold">
+            <span>🌎</span>
+            <span>Fulbright Scholar 2015</span>
+          </div>
         </div>
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white nv-fade-in nv-delay-1">
           Neeru Vijh
@@ -27,7 +33,7 @@ export default function Hero() {
         <div className="flex gap-4 justify-center mt-8 flex-wrap nv-fade-in nv-delay-4">
           <a
             href="#contact"
-            className="bg-white text-orange-600 hover:bg-orange-100 hover:shadow-xl hover:scale-105 active:scale-95 px-8 py-3 rounded-lg font-semibold transition-all duration-150"
+            className="bg-white text-orange-600 hover:bg-orange-50 hover:shadow-xl hover:scale-105 active:scale-95 px-8 py-3 rounded-lg font-semibold transition-all duration-150"
           >
             Get in Touch
           </a>
@@ -37,12 +43,12 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="border-2 border-white text-white hover:bg-white/25 hover:scale-105 active:scale-95 px-8 py-3 rounded-lg font-semibold transition-all duration-150"
           >
-            Watch on YouTube
+            Watch Free Lessons
           </a>
         </div>
       </div>
 
-      {/* Wave into Stats (orange-50) */}
+      {/* Wave into Stats */}
       <div className="absolute bottom-0 left-0 right-0">
         <svg
           viewBox="0 0 1440 72"

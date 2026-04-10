@@ -23,20 +23,35 @@ export default function About() {
                 Meet Neeru Maam
               </h2>
               {/* TODO: Replace with Neeru Vijh's actual bio */}
+              {/* TODO: Add specific school names - "Having spent her career at [School A], [School B] and [School C]..." - naming recognisable Delhi schools significantly increases credibility with local families */}
               <p className="text-gray-600 leading-relaxed text-base mb-4">
-                With over 38 years of teaching experience in Delhi&apos;s top schools, Neeru Maam
-                has guided thousands of students through Maths and Science with patience, clarity,
-                and deep expertise. Whether you&apos;re preparing for your Class 10 or 12 board
-                exams, or building a strong foundation in middle school, her teaching adapts to
-                your pace and learning style.
+                Having spent her entire career in Delhi&apos;s top schools, Neeru Maam has guided
+                thousands of students through Maths and Science with patience, clarity, and deep
+                expertise. Whether your child is preparing for Class 10 or 12 board exams, or
+                building a strong foundation in middle school, her teaching meets each student
+                where they are - no two sessions look exactly alike.
               </p>
               <p className="text-gray-600 leading-relaxed text-base mb-4">
-                Teaching in both English and Hindi medium, covering CBSE and ICSE curricula,
-                Neeru Maam brings classroom expertise to your home through online sessions.
+                Whether your child studies in English or Hindi medium, follows CBSE or ICSE - the
+                same depth of classroom teaching is now available from home.
               </p>
-              <div className="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-800 px-4 py-2 rounded-full text-sm font-semibold mt-2">
-                <span>🏅</span>
-                <span>Delhi State Teachers&apos; Award 2022</span>
+              <div className="flex flex-wrap gap-2 mt-4">
+                <div className="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-800 px-3 py-1.5 rounded-full text-sm font-semibold">
+                  <span>🎓</span>
+                  <span>M.Sc. Mathematics, University of Delhi</span>
+                </div>
+                <div className="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-800 px-3 py-1.5 rounded-full text-sm font-semibold">
+                  <span>📚</span>
+                  <span>B.Ed., University of Delhi (CIE)</span>
+                </div>
+                <div className="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-800 px-3 py-1.5 rounded-full text-sm font-semibold">
+                  <span>🌎</span>
+                  <span>Fulbright Scholar 2015</span>
+                </div>
+                <div className="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-800 px-3 py-1.5 rounded-full text-sm font-semibold">
+                  <span>🏅</span>
+                  <span>Delhi State Teachers&apos; Award 2022</span>
+                </div>
               </div>
             </div>
           </AnimateIn>

@@ -1,7 +1,7 @@
 export default function WhatsAppButton() {
   // TODO: Replace with Neeru Vijh's WhatsApp number (Indian format: 91XXXXXXXXXX)
   const url =
-    "https://wa.me/910000000000?text=Hi%20Neeru%20Maam%2C%20I%27m%20interested%20in%20tutoring%20for%20my%20child.";
+    "https://wa.me/910000000000?text=Hi%20Neeru%20Maam%2C%20I%27m%20interested%20in%20tutoring.";
 
   return (
     <a

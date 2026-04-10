@@ -1,3 +1,5 @@
+import AnimateIn from "@/components/AnimateIn";
+
 const steps = [
   {
     number: "01",
@@ -7,19 +9,17 @@ const steps = [
   },
   {
     number: "02",
-    title: "Introductory Class",
+    title: "First Class",
     description:
-      "Schedule a 30-minute introductory session to understand your child's level and discuss what they need.",
+      "Schedule your first class - Neeru Maam will assess your child's level and tailor sessions to their needs.",
   },
   {
     number: "03",
     title: "Start Learning",
     description:
-      "Begin regular weekly sessions over video call, scheduled around your child's timetable.",
+      "Begin regular sessions over video call, at times that work around school, tuition, and everything else.",
   },
 ];
-
-import AnimateIn from "@/components/AnimateIn";
 
 export default function HowItWorks() {
   return (
@@ -34,7 +34,7 @@ export default function HowItWorks() {
               How It Works
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Getting started takes less than a day.
+              One WhatsApp message is all it takes to get started.
             </p>
           </div>
         </AnimateIn>
@@ -45,9 +45,12 @@ export default function HowItWorks() {
               <div className="relative text-center">
                 {/* Connector line between steps (desktop only) */}
                 {i < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-8 left-[calc(50%+2rem)] right-[-calc(50%-2rem)] h-px bg-orange-200" />
+                  <div
+                    className="hidden md:block absolute top-8 h-px bg-orange-200"
+                    style={{ left: "calc(50% + 2rem)", right: "-50%" }}
+                  />
                 )}
-                <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4 relative z-10">
+                <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4 relative z-10 shadow-md">
                   <span className="text-white font-bold text-lg">{step.number}</span>
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{step.title}</h3>
