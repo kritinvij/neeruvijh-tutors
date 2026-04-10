@@ -29,6 +29,10 @@ export default function About() {
               Teaching in both English and Hindi medium, covering CBSE and ICSE curricula,
               Neeru Maam brings classroom expertise to your home through online sessions.
             </p>
+            <div className="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-800 px-4 py-2 rounded-full text-sm font-semibold mt-2">
+              <span>🏅</span>
+              <span>Delhi State Teachers&apos; Award 2022</span>
+            </div>
           </div>
         </div>
       </div>

@@ -23,10 +23,10 @@ const features: Feature[] = [
       "Comfortable in both English and Hindi medium - teaches in the language that works best for you.",
   },
   {
-    emoji: "💻",
-    title: "Online Classes",
+    emoji: "🏅",
+    title: "State Award Winner",
     description:
-      "Learn from anywhere via video call. Flexible scheduling to fit your routine.",
+      "Recipient of the Delhi State Teachers' Award 2022, presented by the Delhi Education Minister on Teachers' Day.",
   },
 ];
 
@@ -49,7 +49,7 @@ export default function WhyChoose() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
           {features.map((feature) => (
-            <div key={feature.title} className="text-center p-6">
+            <div key={feature.title} className="text-center p-6 rounded-2xl hover:bg-amber-50 transition-colors duration-200">
               <div className="text-3xl mb-4 w-16 h-16 bg-amber-50 rounded-full flex items-center justify-center mx-auto">
                 {feature.emoji}
               </div>
