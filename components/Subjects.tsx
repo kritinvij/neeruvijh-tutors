@@ -1,8 +1,11 @@
+import AnimateIn from "@/components/AnimateIn";
+
 type SubjectCard = {
   emoji: string;
   subject: string;
   classes: string;
   description: string;
+  topics: string[];
 };
 
 const cards: SubjectCard[] = [
@@ -10,31 +13,31 @@ const cards: SubjectCard[] = [
     emoji: "📐",
     subject: "Mathematics",
     classes: "Classes 6-8",
-    description: "Building strong foundations in algebra, geometry, and arithmetic",
+    description: "Building solid foundations before board-level pressure arrives.",
+    topics: ["Number Systems", "Algebra", "Geometry", "Mensuration", "Data Handling"],
   },
   {
     emoji: "📊",
     subject: "Mathematics",
     classes: "Classes 9-10",
-    description:
-      "Board exam preparation for CBSE & ICSE with focus on problem-solving",
+    description: "Board exam preparation with concept clarity and problem-solving practice.",
+    topics: ["Real Numbers", "Polynomials", "Trigonometry", "Coordinate Geometry", "Statistics"],
   },
   {
     emoji: "🔢",
     subject: "Mathematics",
     classes: "Classes 11-12",
-    description: "Advanced topics: calculus, statistics, and board exam mastery",
+    description: "Advanced Maths with board exam strategy and time management.",
+    topics: ["Calculus", "Vectors & 3D", "Probability", "Sets & Relations", "Matrices"],
   },
   {
     emoji: "🔬",
     subject: "Science",
     classes: "Classes 6-10",
-    description:
-      "Physics, Chemistry, and Biology - building the conceptual clarity that board exams reward",
+    description: "Physics, Chemistry, and Biology — concept first, numericals second.",
+    topics: ["Motion & Forces", "Light & Optics", "Atoms & Molecules", "Life Processes", "Electricity"],
   },
 ];
-
-import AnimateIn from "@/components/AnimateIn";
 
 export default function Subjects() {
   return (
@@ -65,7 +68,20 @@ export default function Subjects() {
                 <p className="text-lg font-bold text-gray-900">{card.subject}</p>
                 <p className="text-sm font-medium text-orange-500 mt-1">{card.classes}</p>
                 <p className="text-sm text-gray-600 mt-3 leading-relaxed">{card.description}</p>
-                <div className="flex gap-2 mt-4 flex-wrap">
+
+                {/* Topic chips */}
+                <div className="flex flex-wrap gap-1.5 mt-4">
+                  {card.topics.map((topic) => (
+                    <span
+                      key={topic}
+                      className="text-xs bg-amber-50 border border-amber-200 text-gray-600 px-2.5 py-1 rounded-full"
+                    >
+                      {topic}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex gap-2 mt-4">
                   <span className="text-xs bg-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">
                     CBSE
                   </span>

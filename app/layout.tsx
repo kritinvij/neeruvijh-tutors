@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollToTop from "@/components/ScrollToTop";
+import { Analytics } from "@vercel/analytics/next";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -40,6 +41,9 @@ export const metadata: Metadata = {
     "Delhi Maths tutor",
   ],
   robots: { index: true, follow: true },
+  alternates: {
+    canonical: "https://neeruvijhtutors.vercel.app",
+  },
   openGraph: {
     title: "Neeru Vijh | Maths & Science Tutor | Fulbright Scholar",
     description:
@@ -48,6 +52,14 @@ export const metadata: Metadata = {
     siteName: "Neeru Vijh Tutoring",
     url: "https://neeruvijhtutors.vercel.app",
     locale: "en_IN",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Neeru Vijh | Maths & Science Tutor",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -55,6 +67,7 @@ export const metadata: Metadata = {
     description:
       "Online Maths & Science tutoring — 38 years of experience, Fulbright Scholar 2015, Delhi State Teachers' Award 2022. CBSE, ICSE, English & Hindi medium.",
     site: "@NeeruVijh",
+    images: ["/opengraph-image.png"],
   },
 };
 
@@ -102,6 +115,69 @@ const serviceJsonLd = {
   },
 };
 
+const reviewsJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  name: "Neeru Vijh - Maths & Science Tutoring",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    reviewCount: "6",
+    bestRating: "5",
+    worstRating: "1",
+  },
+  review: [
+    {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: "Parent of Class 10 Student" },
+      datePublished: "2023-04-01",
+      reviewBody:
+        "Neeru Maam explained concepts so clearly that my son went from failing Maths to scoring 85 in his Class 10 boards. Her patience and deep knowledge made all the difference.",
+    },
+    {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: "Class 8 Student" },
+      datePublished: "2023-07-01",
+      reviewBody:
+        "I struggled with Maths for years, but Neeru Maam's teaching style in Hindi made everything click. Highly recommended for any student who needs a strong foundation.",
+    },
+    {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: "Parent of Class 9 Student" },
+      datePublished: "2024-04-01",
+      reviewBody:
+        "38 years of experience shows in every class. She knows exactly where students get stuck and addresses it proactively. My daughter scored 92 in Science.",
+    },
+    {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: "Class 12 Student" },
+      datePublished: "2024-05-01",
+      reviewBody:
+        "I was terrified of Class 12 Maths. Neeru Maam built everything from first principles. Ended up scoring 91 in boards.",
+    },
+    {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: "Parent of Class 6 Student" },
+      datePublished: "2024-01-01",
+      reviewBody:
+        "My daughter had a genuine fear of fractions in Class 6. Two months with Neeru Maam and she is explaining concepts to her classmates.",
+    },
+    {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: "Parent of Class 11 Student" },
+      datePublished: "2024-03-01",
+      reviewBody:
+        "The WhatsApp doubt-clearing between sessions is what sets Neeru Maam apart. No waiting a whole week for an answer.",
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -110,6 +186,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${dmSans.variable}`}>
       <head>
+        <link rel="preconnect" href="https://img.youtube.com" />
+        <link rel="dns-prefetch" href="https://www.youtube.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
@@ -118,12 +196,17 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsJsonLd) }}
+        />
       </head>
       <body className="bg-white">
         <Navbar />
         <main>{children}</main>
         <WhatsAppButton />
         <ScrollToTop />
+        <Analytics />
       </body>
     </html>
   );

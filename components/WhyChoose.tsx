@@ -35,7 +35,7 @@ const features: Feature[] = [
 
 export default function WhyChoose() {
   return (
-    <section className="bg-white py-20">
+    <section id="why-choose" className="bg-white py-20">
       <div className="max-w-6xl mx-auto px-6">
         <AnimateIn direction="scale">
           <div className="text-center">

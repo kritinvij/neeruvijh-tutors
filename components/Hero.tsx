@@ -24,9 +24,9 @@ export default function Hero() {
     <section className="relative flex items-center justify-center bg-gradient-to-br from-orange-500 to-amber-400 overflow-hidden pt-28 pb-20 sm:pt-36 sm:pb-24">
 
       {/* Animated background blobs */}
-      <div className="absolute top-[-22%] left-[-14%] w-[62%] h-[72%] rounded-full bg-amber-300/30 blur-[100px] nv-float-1 pointer-events-none" />
-      <div className="absolute bottom-[-18%] right-[-10%] w-[58%] h-[68%] rounded-full bg-orange-600/25 blur-[90px]  nv-float-2 pointer-events-none" />
-      <div className="absolute top-[22%]  right-[14%]  w-[36%] h-[48%] rounded-full bg-white/[0.09]  blur-[70px]  nv-float-3 pointer-events-none" />
+      <div className="absolute top-[-22%] left-[-14%] w-[50%] h-[60%] rounded-full bg-amber-300/30 blur-[48px] nv-float-1 pointer-events-none" />
+      <div className="absolute bottom-[-18%] right-[-10%] w-[46%] h-[55%] rounded-full bg-orange-600/25 blur-[40px]  nv-float-2 pointer-events-none" />
+      <div className="absolute top-[22%]  right-[14%]  w-[30%] h-[40%] rounded-full bg-white/[0.09]  blur-[32px]  nv-float-3 pointer-events-none" />
 
       {/* Central light cone */}
       <div

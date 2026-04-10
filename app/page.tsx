@@ -7,6 +7,7 @@ import Approach from "@/components/Approach";
 import HowItWorks from "@/components/HowItWorks";
 import YouTube from "@/components/YouTube";
 import Testimonials from "@/components/Testimonials";
+import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WaveDivider from "@/components/WaveDivider";
@@ -29,8 +30,10 @@ export default function Home() {
       <HowItWorks />
       <WaveDivider topColor="bg-white" bottomColor="fill-orange-50" flip />
       <YouTube />
-      <WaveDivider topColor="bg-orange-50" bottomColor="fill-white" />
+      <WaveDivider topColor="bg-orange-50" bottomColor="fill-amber-50" />
       <Testimonials />
+      <WaveDivider topColor="bg-amber-50" bottomColor="fill-white" />
+      <FAQ />
       <Contact />
       <Footer />
     </>

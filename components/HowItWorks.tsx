@@ -23,7 +23,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="bg-white py-20">
+    <section id="how-it-works" className="bg-white py-20">
       <div className="max-w-6xl mx-auto px-6">
         <AnimateIn>
           <div className="text-center">

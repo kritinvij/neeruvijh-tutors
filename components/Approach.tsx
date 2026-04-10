@@ -35,7 +35,7 @@ const practices: Practice[] = [
 
 export default function Approach() {
   return (
-    <section className="bg-amber-50 nv-textured py-20">
+    <section id="approach" className="bg-amber-50 nv-textured py-20">
       <div className="max-w-6xl mx-auto px-6">
         <AnimateIn>
           <div className="text-center">
