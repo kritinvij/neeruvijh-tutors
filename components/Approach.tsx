@@ -35,11 +35,11 @@ const practices: Practice[] = [
 
 export default function Approach() {
   return (
-    <section className="bg-amber-50 py-20">
+    <section className="bg-amber-50 nv-textured py-20">
       <div className="max-w-6xl mx-auto px-6">
         <AnimateIn>
           <div className="text-center">
-            <p className="text-sm font-semibold uppercase tracking-wider text-orange-500 mb-3">
+            <p className="text-sm font-semibold uppercase tracking-wider text-orange-500 mb-3 nv-label">
               How She Teaches
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
@@ -54,7 +54,7 @@ export default function Approach() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12">
           {practices.map((practice, i) => (
-            <AnimateIn key={practice.title} delay={i * 0.1}>
+            <AnimateIn key={practice.title} delay={i * 0.1} direction={i % 2 === 0 ? "left" : "right"}>
               <div className="flex gap-5 bg-white rounded-2xl p-6 shadow-sm border border-amber-100 hover:shadow-md hover:-translate-y-1 transition-all duration-200">
                 <div className="text-2xl w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center shrink-0">
                   {practice.icon}

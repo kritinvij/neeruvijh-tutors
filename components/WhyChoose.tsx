@@ -37,9 +37,9 @@ export default function WhyChoose() {
   return (
     <section className="bg-white py-20">
       <div className="max-w-6xl mx-auto px-6">
-        <AnimateIn>
+        <AnimateIn direction="scale">
           <div className="text-center">
-            <p className="text-sm font-semibold uppercase tracking-wider text-orange-500 mb-3">
+            <p className="text-sm font-semibold uppercase tracking-wider text-orange-500 mb-3 nv-label">
               Why Neeru Maam
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
@@ -54,9 +54,9 @@ export default function WhyChoose() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
           {features.map((feature, i) => (
-            <AnimateIn key={feature.title} delay={i * 0.1}>
-              <div className="text-center bg-orange-50 rounded-2xl p-6 hover:shadow-md hover:-translate-y-1 transition-all duration-200 border border-orange-100">
-                <div className="text-3xl mb-4 w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto shadow-sm">
+            <AnimateIn key={feature.title} delay={i * 0.1} direction="up">
+              <div className="group text-center bg-orange-50 rounded-2xl p-6 border border-orange-100 transition-all duration-250 hover:-translate-y-1.5 hover:border-orange-200 hover:shadow-[0_10px_32px_rgba(249,115,22,0.14)]">
+                <div className="text-3xl mb-4 w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto shadow-sm transition-shadow duration-250 group-hover:shadow-md">
                   {feature.emoji}
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{feature.title}</h3>
