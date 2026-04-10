@@ -3,6 +3,7 @@ import Stats from "@/components/Stats";
 import About from "@/components/About";
 import Subjects from "@/components/Subjects";
 import WhyChoose from "@/components/WhyChoose";
+import HowItWorks from "@/components/HowItWorks";
 import YouTube from "@/components/YouTube";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
@@ -16,6 +17,7 @@ export default function Home() {
       <About />
       <Subjects />
       <WhyChoose />
+      <HowItWorks />
       <YouTube />
       <Testimonials />
       <Contact />

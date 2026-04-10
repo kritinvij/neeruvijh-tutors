@@ -45,7 +45,7 @@ export default function YouTube() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {VIDEO_IDS.map((id, i) => (
-            <div key={id} className="aspect-video rounded-xl overflow-hidden">
+            <div key={id} className={`aspect-video rounded-xl overflow-hidden${i > 0 ? " hidden sm:block" : ""}`}>
               <iframe
                 width="100%"
                 height="100%"

@@ -29,7 +29,7 @@ export default function Hero() {
             href="#contact"
             className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-3 rounded-lg font-semibold transition-colors"
           >
-            Get in Touch
+            Book Free Trial
           </a>
           <a
             href="https://www.youtube.com/c/MathAndMorewithNeeruVijh"

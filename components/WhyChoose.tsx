@@ -32,7 +32,7 @@ const features: Feature[] = [
 
 export default function WhyChoose() {
   return (
-    <section className="bg-white py-20">
+    <section className="bg-amber-50 py-20">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-orange-500 mb-3">
