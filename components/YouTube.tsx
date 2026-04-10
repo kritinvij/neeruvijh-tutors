@@ -45,17 +45,16 @@ export default function YouTube() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {VIDEO_IDS.map((id) => (
+          {VIDEO_IDS.map((id, i) => (
             <div key={id} className="aspect-video rounded-xl overflow-hidden">
               <iframe
                 width="100%"
-                height="200"
+                height="100%"
                 src={`https://www.youtube.com/embed/${id}`}
-                title="Neeru Vijh - YouTube Video"
-                frameBorder="0"
+                title={`Neeru Vijh - YouTube Video ${i + 1}`}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                className="rounded-xl"
+                className="rounded-xl border-0 w-full h-full"
               />
             </div>
           ))}
