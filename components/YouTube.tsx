@@ -1,9 +1,8 @@
-// TODO: Replace with real video IDs from her YouTube channel
-// How to find: open a video at youtube.com/c/MathAndMorewithNeeruVijh, copy the ?v=XXXXXXXXXXX part
+// Top 3 most-viewed videos from the channel (from Popular tab)
 const VIDEO_IDS = [
-  "VIDEO_ID_1_HERE", // replace with first video ID
-  "VIDEO_ID_2_HERE", // replace with second video ID
-  "VIDEO_ID_3_HERE", // replace with third video ID
+  "RvK147Eeloc",
+  "7aBYd9Ie7j4",
+  "yJp78g2zTUc",
 ];
 
 export default function YouTube() {
