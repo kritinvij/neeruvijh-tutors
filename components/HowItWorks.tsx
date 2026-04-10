@@ -27,7 +27,7 @@ export default function HowItWorks() {
       <div className="max-w-6xl mx-auto px-6">
         <AnimateIn>
           <div className="text-center">
-            <p className="text-sm font-semibold uppercase tracking-wider text-orange-500 mb-3">
+            <p className="text-sm font-semibold uppercase tracking-wider text-orange-500 mb-3 nv-label">
               Simple Process
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
@@ -41,7 +41,7 @@ export default function HowItWorks() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           {steps.map((step, i) => (
-            <AnimateIn key={step.number} delay={i * 0.15}>
+            <AnimateIn key={step.number} delay={i * 0.15} direction={i === 0 ? "left" : i === 2 ? "right" : "scale"}>
               <div className="relative text-center">
                 {/* Connector line between steps (desktop only) */}
                 {i < steps.length - 1 && (

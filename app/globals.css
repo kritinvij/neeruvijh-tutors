@@ -1,20 +1,97 @@
 @import "tailwindcss";
 
+/* ── Font variables ─────────────────────────────────────────────── */
+@theme {
+  --font-sans:  var(--font-dm-sans),  'DM Sans',          ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), 'Playfair Display',  Georgia,       serif;
+
+  /* ── gray → warm espresso ───────────────────────────────────── */
+  --color-gray-50:  #FAF7F4;
+  --color-gray-100: #F2EDE6;
+  --color-gray-200: #E4DAD0;
+  --color-gray-300: #C8B8A8;
+  --color-gray-400: #A89078;
+  --color-gray-500: #8A7262;
+  --color-gray-600: #6E5848;
+  --color-gray-700: #543F30;
+  --color-gray-800: #3C2A1E;
+  --color-gray-900: #28190E;
+
+  /* ── white → ivory/parchment ────────────────────────────────── */
+  --color-white: #FFFDF7;
+}
+
+/* ── Base ───────────────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
 }
 
-@keyframes nv-fade-in {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: translateY(0); }
+/* ── Heading typography: Playfair Display on all h1/h2/h3 ───────── */
+h1, h2, h3 {
+  font-family: var(--font-playfair), 'Playfair Display', Georgia, serif;
 }
-.nv-fade-in { animation: nv-fade-in 0.65s ease-out both; }
 
-.nv-delay-1 { animation-delay: 150ms; }
-.nv-delay-2 { animation-delay: 300ms; }
-.nv-delay-3 { animation-delay: 450ms; }
-.nv-delay-4 { animation-delay: 600ms; }
+/* ── Section label diamond decorators ──────────────────────────── */
+.nv-label::before,
+.nv-label::after {
+  content: '◆';
+  font-size: 0.45em;
+  opacity: 0.55;
+  vertical-align: middle;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+.nv-label::before { margin-right: 0.45rem; }
+.nv-label::after  { margin-left:  0.45rem; }
+
+/* ── Geometric jali texture (diamond lattice) ───────────────────── */
+.nv-textured {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><path d='M16 0 L32 16 L16 32 L0 16Z' fill='none' stroke='%23B8860B' stroke-width='0.6' stroke-opacity='0.13'/></svg>");
+}
+
+/* ── Fade-in animations ─────────────────────────────────────────── */
+@keyframes nv-fade-in {
+  from { opacity: 0; transform: translateY(26px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+.nv-fade-in { animation: nv-fade-in 0.72s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+.nv-delay-1 { animation-delay: 120ms; }
+.nv-delay-2 { animation-delay: 240ms; }
+.nv-delay-3 { animation-delay: 360ms; }
+.nv-delay-4 { animation-delay: 480ms; }
+
+/* ── Floating blob animations (Hero background) ─────────────────── */
+@keyframes nv-float-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(18px, -14px) scale(1.04); }
+  66%       { transform: translate(-10px, 10px) scale(0.97); }
+}
+@keyframes nv-float-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  40%       { transform: translate(-22px, 14px) scale(1.06); }
+  80%       { transform: translate(8px, -8px) scale(0.96); }
+}
+@keyframes nv-float-3 {
+  0%, 100% { transform: translate(0, 0); }
+  50%       { transform: translate(14px, -18px); }
+}
+
+.nv-float-1 { animation: nv-float-1 8s ease-in-out infinite; }
+.nv-float-2 { animation: nv-float-2 11s ease-in-out infinite; }
+.nv-float-3 { animation: nv-float-3 14s ease-in-out infinite; }
+
+/* ── WhatsApp pulse ring ─────────────────────────────────────────── */
+@keyframes nv-pulse-ring {
+  0%   { transform: scale(1);    opacity: 0.55; }
+  75%  { transform: scale(1.7);  opacity: 0; }
+  100% { transform: scale(1.7);  opacity: 0; }
+}
+.nv-pulse {
+  animation: nv-pulse-ring 2.4s ease-out infinite;
+}
 
 @media (prefers-reduced-motion: reduce) {
   .nv-fade-in { animation: none; }
+  .nv-float-1, .nv-float-2, .nv-float-3 { animation: none; }
+  .nv-pulse { animation: none; }
 }

@@ -61,11 +61,11 @@ function VideoFacade({ id, index }: { id: string; index: number }) {
 
 export default function YouTube() {
   return (
-    <section id="youtube" className="bg-orange-50 py-20">
+    <section id="youtube" className="bg-orange-50 nv-textured py-20">
       <div className="max-w-6xl mx-auto px-6">
         <AnimateIn>
           <div className="text-center">
-            <p className="text-sm font-semibold uppercase tracking-wider text-orange-500 mb-3">
+            <p className="text-sm font-semibold uppercase tracking-wider text-orange-500 mb-3 nv-label">
               Free Resources
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">

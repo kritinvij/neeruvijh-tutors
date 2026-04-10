@@ -37,30 +37,31 @@ export default function Navbar() {
           <svg
             width="36"
             height="36"
-            viewBox="0 0 80 80"
+            viewBox="0 0 90 90"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             aria-label="Neeru Vijh logo mark"
-            className="shrink-0 drop-shadow-sm"
+            className={`shrink-0 transition-colors duration-300 ${solid ? "text-gray-900" : "text-white drop-shadow-sm"}`}
           >
-            <defs>
-              <linearGradient id="nv-logo-grad" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
-                <stop stopColor="#f97316" />
-                <stop offset="1" stopColor="#f59e0b" />
-              </linearGradient>
-              <linearGradient id="nv-nib-grad" x1="40" y1="5" x2="40" y2="79" gradientUnits="userSpaceOnUse">
-                <stop stopColor="#fff7ed" />
-                <stop offset="1" stopColor="#ffffff" />
-              </linearGradient>
-            </defs>
-            <circle cx="40" cy="40" r="40" fill="url(#nv-logo-grad)" />
-            <path d="M14,62 C14,74 26,79 40,79 C54,79 66,74 66,62 L40,5 Z" fill="url(#nv-nib-grad)" />
-            <path d="M14,62 C14,74 26,79 40,79 L40,5 Q27,20 21,36 Q15,48 14,62 Z" fill="#f97316" fillOpacity="0.07" />
-            <line x1="30" y1="34" x2="50" y2="34" stroke="#f97316" strokeWidth="1.75" strokeLinecap="round" strokeOpacity="0.4" />
-            <circle cx="40" cy="28" r="3.5" fill="#f97316" fillOpacity="0.38" />
-            <line x1="40" y1="24.5" x2="40" y2="5" stroke="#f97316" strokeWidth="2.5" strokeLinecap="round" />
-            <polyline points="25,62 25,43 34,62 34,43" stroke="#f97316" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-            <polyline points="38,43 46,62 54,43" stroke="#f97316" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            {/* Outer ring */}
+            <circle cx="45" cy="45" r="40" stroke="currentColor" strokeWidth="2" />
+            {/* Inner ring */}
+            <circle cx="45" cy="45" r="33" stroke="currentColor" strokeWidth="0.9" opacity="0.35" />
+            {/* NV serif monogram */}
+            <text
+              x="45" y="54" textAnchor="middle" fill="currentColor"
+              style={{
+                fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
+                fontSize: "30px",
+                fontWeight: 700,
+                letterSpacing: "0.04em",
+              }}
+            >NV</text>
+            {/* Orange ◆ at cardinal points */}
+            <path d="M45 5.5 L47.5 9 L45 12.5 L42.5 9 Z" fill="#f97316" />
+            <path d="M84.5 45 L88 47.5 L84.5 50 L81 47.5 Z" fill="#f97316" />
+            <path d="M45 84.5 L47.5 81 L45 77.5 L42.5 81 Z" fill="#f97316" />
+            <path d="M5.5 45 L2 47.5 L5.5 50 L9 47.5 Z" fill="#f97316" />
           </svg>
           <span className={`text-base sm:text-lg font-bold transition-colors duration-300 ${solid ? "text-gray-900" : "text-white"}`}>
             Neeru Vijh

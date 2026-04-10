@@ -38,11 +38,11 @@ import AnimateIn from "@/components/AnimateIn";
 
 export default function Subjects() {
   return (
-    <section id="subjects" className="bg-amber-50 py-20">
+    <section id="subjects" className="bg-amber-50 nv-textured py-20">
       <div className="max-w-6xl mx-auto px-6">
         <AnimateIn>
           <div className="text-center">
-            <p className="text-sm font-semibold uppercase tracking-wider text-orange-500 mb-3">
+            <p className="text-sm font-semibold uppercase tracking-wider text-orange-500 mb-3 nv-label">
               What I Teach
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
@@ -57,7 +57,7 @@ export default function Subjects() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12">
           {cards.map((card, i) => (
-            <AnimateIn key={`${card.subject}-${card.classes}`} delay={i * 0.1}>
+            <AnimateIn key={`${card.subject}-${card.classes}`} delay={i * 0.1} direction="scale">
               <div className="bg-gradient-to-br from-white to-amber-50 rounded-2xl border border-amber-100 border-l-4 border-l-orange-400 p-6 shadow-md hover:shadow-xl hover:-translate-y-1.5 transition-all duration-200">
                 <div className="text-2xl mb-4 w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
                   {card.emoji}
