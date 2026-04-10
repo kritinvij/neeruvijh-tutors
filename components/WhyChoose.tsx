@@ -49,8 +49,8 @@ export default function WhyChoose() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
           {features.map((feature) => (
-            <div key={feature.title} className="text-center p-6 rounded-2xl hover:bg-amber-50 transition-colors duration-200">
-              <div className="text-3xl mb-4 w-16 h-16 bg-amber-50 rounded-full flex items-center justify-center mx-auto">
+            <div key={feature.title} className="text-center bg-white rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200">
+              <div className="text-3xl mb-4 w-16 h-16 bg-gradient-to-br from-orange-100 to-amber-100 rounded-2xl flex items-center justify-center mx-auto">
                 {feature.emoji}
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">{feature.title}</h3>

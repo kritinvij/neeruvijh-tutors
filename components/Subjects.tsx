@@ -55,7 +55,7 @@ export default function Subjects() {
           {cards.map((card) => (
             <div
               key={`${card.subject}-${card.classes}`}
-              className="bg-white rounded-xl border border-amber-100 border-l-4 border-l-orange-400 p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-200"
+              className="bg-gradient-to-br from-white to-amber-50 rounded-2xl border border-amber-100 border-l-4 border-l-orange-400 p-6 shadow-md hover:shadow-xl hover:-translate-y-1.5 transition-all duration-200"
             >
               <div className="text-2xl mb-4 w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
                 {card.emoji}

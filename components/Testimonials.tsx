@@ -46,9 +46,9 @@ export default function Testimonials() {
           {testimonials.map((t) => (
             <div
               key={`${t.name}-${t.context}`}
-              className="bg-gray-50 rounded-xl p-6 border border-gray-100"
+              className="bg-white rounded-2xl p-6 shadow-md border border-orange-50 hover:shadow-lg hover:-translate-y-1 transition-all duration-200"
             >
-              <div className="text-4xl text-orange-300 font-serif leading-none mb-4">&ldquo;</div>
+              <div className="text-5xl text-orange-300 font-serif leading-none mb-3 -mt-1">&ldquo;</div>
               <p className="text-gray-700 text-sm leading-relaxed mb-4">{t.quote}</p>
               <p className="font-semibold text-gray-900 text-sm">{t.name}</p>
               <p className="text-xs text-gray-500">{t.context}</p>
