@@ -43,9 +43,9 @@ export default function Testimonials() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-          {testimonials.map((t, i) => (
+          {testimonials.map((t) => (
             <div
-              key={i}
+              key={`${t.name}-${t.context}`}
               className="bg-gray-50 rounded-xl p-6 border border-gray-100"
             >
               <div className="text-4xl text-orange-300 font-serif leading-none mb-4">&ldquo;</div>

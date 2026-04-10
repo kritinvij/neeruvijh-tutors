@@ -54,6 +54,7 @@ export default function YouTube() {
                 title={`Neeru Vijh - YouTube Video ${i + 1}`}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
+                loading="lazy"
                 className="rounded-xl border-0 w-full h-full"
               />
             </div>

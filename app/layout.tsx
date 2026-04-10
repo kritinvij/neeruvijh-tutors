@@ -12,6 +12,12 @@ export const metadata: Metadata = {
   title: "Neeru Vijh | Maths & Science Tutor",
   description:
     "Private online tutoring for Maths (Classes 6-12) and Science (Classes 6-10). CBSE and ICSE. English and Hindi medium. By Neeru Vijh, with 38 years of teaching experience.",
+  openGraph: {
+    title: "Neeru Vijh | Maths & Science Tutor",
+    description:
+      "Private online tutoring for Maths (Classes 6-12) and Science (Classes 6-10). CBSE and ICSE. English and Hindi medium.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
